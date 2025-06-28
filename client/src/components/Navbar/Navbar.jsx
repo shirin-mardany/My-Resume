@@ -2,8 +2,6 @@ import React from 'react'
 
 export default function Navbar() {
   return (
-    <div>
-      navbar
-    </div>
+  <div className='Navbar'>nAvbar</div>
   )
 }
