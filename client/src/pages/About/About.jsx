@@ -3,7 +3,7 @@ import React from "react";
 //mui
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
-import { Grid, Typography } from "@mui/material";
+import { Grid, List, ListItem, Typography } from "@mui/material";
 
 //table mui
 import Table from "@mui/material/Table";
@@ -57,7 +57,7 @@ export default function About() {
           ...centerFlex,
         }}
       >
-        {/* 🔹 باکس اسم */}
+        {/* 🔹 باکس اسم ---------------------*/}
         <Grid
           item
           xs={12}
@@ -100,7 +100,7 @@ export default function About() {
           </Box>
         </Grid>
 
-        {/* 🔹 باکس عکس */}
+        {/* 🔹 باکس عکس ---------------------------*/}
         <Grid
           item
           xs={12}
@@ -133,7 +133,7 @@ export default function About() {
           </Box>
         </Grid>
 
-        {/* 🔹 درباره من */}
+        {/* 🔹 درباره من ---------------------------*/}
         <Grid
           container
           spacing={2}
@@ -161,7 +161,7 @@ export default function About() {
             </Box>
           </Grid>
         </Grid>
-        {/* 🔹 moore */}
+        {/* 🔹 moore--------------------------------- */}
         <Grid
           container
           spacing={1}
@@ -172,7 +172,7 @@ export default function About() {
               sm: "repeat(2, 1fr)",
               lg: "repeat(3, 1fr)",
             },
-            gridTemplateRows: "repeat(2, 350px)",
+            gridTemplateRows: "repeat(3, 350px)",
             width: "100%",
           }}
         >
@@ -180,73 +180,10 @@ export default function About() {
           <Grid
             item
             xs={12}
-            // md={4}
             sx={{
               border: "1px solid #eeeeee",
               color: "#e0e0e0",
-              height: {
-                xs: "auto",
-                sm: "auto",
-                lg: "700px",
-              },
-              overflow: { xs: "auto", sm: "auto", lg: "hidden" },
-            }}
-          >
-            <Box
-              sx={{
-                p: 4,
-              }}
-            >
-              <Typography variant="h4" fontWeight="bold" align="right">
-                مهارت‌ها
-              </Typography>
-              {/* --------- table >>---------- */}
-              <TableContainer
-                component={Paper}
-                sx={{ mt: 2, bgcolor: "#962e2e" }}
-              >
-                <Table size="small" aria-label="skills table">
-                  <TableHead>
-                    <TableRow>
-                      <TableCell
-                        align="right"
-                        sx={{ color: "#fff", fontWeight: "bold" }}
-                      >
-                        مهارت
-                      </TableCell>
-                      <TableCell
-                        align="right"
-                        sx={{ color: "#fff", fontWeight: "bold" }}
-                      >
-                        سطح
-                      </TableCell>
-                    </TableRow>
-                  </TableHead>
-                  <TableBody>
-                    {skills.map((row, idx) => (
-                      <TableRow key={idx}>
-                        <TableCell align="right" sx={{ color: "#fff" }}>
-                          {row.name}
-                        </TableCell>
-                        <TableCell align="right" sx={{ color: "#fff" }}>
-                          {row.level}
-                        </TableCell>
-                      </TableRow>
-                    ))}
-                  </TableBody>
-                </Table>{" "}
-              </TableContainer>
-            </Box>
-          </Grid>
-          {/* --------2---------- */}
-          <Grid
-            item
-            xs={12}
-            // md={4}
-            sx={{
-              border: "1px solid #eeeeee",
               gridRow: "span 2",
-              color: "#e0e0e0",
               height: {
                 xs: "auto",
                 sm: "auto",
@@ -261,25 +198,133 @@ export default function About() {
               }}
             >
               <Typography
-                variant="h6"
+                variant="h4"
+                fontWeight="bold"
+                align="right"
+                sx={{ mb: 4 }}
+              >
+                مهارت‌ها
+              </Typography>
+              {/* --------- table >>---------- */}
+              <TableContainer //قاب اصلی جدول هست، باعث می‌شه اسکرول‌پذیر بشه
+                sx={{ mt: 2, bgcolor: "#212121" }}
+              >
+                {/* -------------------------- */}
+                {/* aria-label="skills table" => Screen Reader */}
+                <Table size="small" aria-label="skills table">
+                  <TableHead>
+                    <TableRow>
+                      <TableCell
+                        align="left"
+                        sx={{
+                          color: "#e0e0e0",
+                          fontWeight: "bold",
+                          fontSize: {
+                            xs: "1.2rem",
+                            sm: "1.5rem",
+                            md: "1.8rem",
+                            lg: "1.8rem",
+                          },
+                          pb: 2,
+                        }}
+                      >
+                        مهارت
+                      </TableCell>
+                      <TableCell
+                        align="right"
+                        sx={{
+                          color: "#e0e0e0",
+                          fontWeight: "bold",
+                          fontSize: {
+                            xs: "1.2rem",
+                            sm: "1.5rem",
+                            md: "1.8rem",
+                            lg: "1.8rem",
+                          },
+                          pb: 2,
+                        }}
+                      >
+                        سطح
+                      </TableCell>
+                    </TableRow>
+                  </TableHead>
+
+                  {/* ------------------- */}
+                  <TableBody>
+                    {skills.map((row, idx) => (
+                      <TableRow key={idx}>
+                        <TableCell align="left" sx={{ color: "#e0e0e0" }}>
+                          {row.name}
+                        </TableCell>
+                        <TableCell
+                          align="right"
+                          sx={{
+                            color: "#e0e0e0",
+                            fontSize: {
+                              xs: "1.2rem",
+                              sm: "1.5rem",
+                              md: "1.5rem",
+                              lg: "1.6rem",
+                            },
+                          }}
+                        >
+                          {row.level}
+                        </TableCell>
+                      </TableRow>
+                    ))}
+                  </TableBody>
+                </Table>
+              </TableContainer>
+            </Box>
+          </Grid>
+          {/* --------2---------- */}
+          <Grid
+            item
+            xs={12}
+            sx={{
+              border: "1px solid #eeeeee",
+              gridRow: "span 3",
+              color: "#e0e0e0",
+              height: {
+                xs: "auto",
+                sm: "auto",
+                lg: "700px",
+              },
+              overflow: { xs: "auto", sm: "auto", lg: "hidden" },
+            }}
+          >
+            <Box
+              align="right"
+              sx={{
+                p: 4,
+              }}
+            >
+              <Typography
+                variant="h5"
                 gutterBottom
                 sx={{
                   fontSize: {
                     xs: "1.2rem",
                     sm: "1.5rem",
                     md: "1.8rem",
-                    lg: "2rem",
+                    lg: "1.5rem",
                   },
                 }}
               >
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Et iste
-                aut architecto enim modi ullam non, commodi delectus facilis
-                voluptatem, quibusdam qui ipsum tempora asperiores natus est
-                nobis praesentium id!
+                فروشگاه اینترنتی ساده
               </Typography>
               <Typography variant="h5" fontWeight="bold">
-                shirin mardani
+                (React + Tailwind + Fake API)
               </Typography>
+              <List sx={{ mt: 2, color: "#e0e0e0", direction: "rtl" , listStyleType: "disc"}}>
+                <ListItem sx={{ display: "list-item" }}>
+                  نمایش لیست محصولات با امکان فیلتر و مرتب‌سازی
+                </ListItem>
+              </List>
+              <Typography variant="h5" fontWeight="bold"></Typography>
+              <Typography variant="h5" fontWeight="bold"></Typography>
+              <Typography variant="h5" fontWeight="bold"></Typography>
+              <Typography variant="h5" fontWeight="bold"></Typography>
             </Box>
           </Grid>
           {/* --------3---------- */}
