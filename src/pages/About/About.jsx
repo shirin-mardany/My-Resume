@@ -289,7 +289,8 @@ export default function About() {
               border: "1px solid #eeeeee",
               gridRow: {
                 xs: "span 1",
-                sm: "span 2",
+                sm: "span 1",
+                md: "span 2",
                 lg: "span 3",
               },
 
