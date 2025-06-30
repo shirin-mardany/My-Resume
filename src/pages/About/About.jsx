@@ -193,7 +193,7 @@ export default function About() {
               border: "1px solid #eeeeee",
               color: "#e0e0e0",
               gridRow: { lg: "span 3" },
-              overflow: { xs: "auto", sm: "auto", lg: "hidden" },
+              // overflow: { xs: "auto", sm: "auto", lg: "hidden" },
             }}
           >
             <Box
