@@ -174,6 +174,7 @@ export default function About() {
             gridTemplateRows: {
               xs: "repeat(3, auto)",
               sm: "repeat(2, auto)",
+              md: "repeat(2, 1fr)",
               lg: "repeat(1, 1fr)",
             },
             width: "100%",
