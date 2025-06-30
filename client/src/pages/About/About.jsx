@@ -12,10 +12,9 @@ import TableCell from "@mui/material/TableCell";
 import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
-import Paper from "@mui/material/Paper";
 
 //img
-import profileImg from "./img/profile.jfif";
+import profileImg from "./img/me.png";
 
 //style mui
 const centerFlex = {
@@ -125,8 +124,8 @@ export default function About() {
               src={profileImg}
               alt="profile picture"
               style={{
-                width: "100%",
-                height: "100%",
+                width: "90%",
+                height: "90%",
                 objectFit: "cover",
               }}
             />
@@ -168,11 +167,11 @@ export default function About() {
           sx={{
             display: "grid",
             gridTemplateColumns: {
-              xs: "repeat(1, 1fr)",
+              xs: "1fr",
               sm: "repeat(2, 1fr)",
               lg: "repeat(3, 1fr)",
             },
-            gridTemplateRows: "repeat(3, 350px)",
+            // gridTemplateRows: "repeat(3, 350px)",
             width: "100%",
           }}
         >
@@ -183,12 +182,13 @@ export default function About() {
             sx={{
               border: "1px solid #eeeeee",
               color: "#e0e0e0",
-              gridRow: "span 2",
-              height: {
-                xs: "auto",
-                sm: "auto",
-                lg: "700px",
-              },
+              gridRow: { xs: "span 2", sm: "span 2", lg: "span 3" },
+              // gridRow: "span 2",
+              // height: {
+              //   xs: "auto",
+              //   sm: "auto",
+              //   lg: "700px",
+              // },
               overflow: { xs: "auto", sm: "auto", lg: "hidden" },
             }}
           >
@@ -283,13 +283,15 @@ export default function About() {
             xs={12}
             sx={{
               border: "1px solid #eeeeee",
-              gridRow: "span 3",
+              // gridRow: "span 3",
+              gridRow: { xs: "span 1", sm: "span 3", lg: "span 3" },
+
               color: "#e0e0e0",
-              height: {
-                xs: "auto",
-                sm: "auto",
-                lg: "700px",
-              },
+              // height: {
+              //   xs: "auto",
+              //   sm: "auto",
+              //   lg: "700px",
+              // },
               overflow: { xs: "auto", sm: "auto", lg: "hidden" },
             }}
           >
@@ -316,7 +318,14 @@ export default function About() {
               <Typography variant="h5" fontWeight="bold">
                 (React + Tailwind + Fake API)
               </Typography>
-              <List sx={{ mt: 2, color: "#e0e0e0", direction: "rtl" , listStyleType: "disc"}}>
+              <List
+                sx={{
+                  mt: 2,
+                  color: "#e0e0e0",
+                  direction: "rtl",
+                  listStyleType: "disc",
+                }}
+              >
                 <ListItem sx={{ display: "list-item" }}>
                   نمایش لیست محصولات با امکان فیلتر و مرتب‌سازی
                 </ListItem>
