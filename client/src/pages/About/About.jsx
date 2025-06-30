@@ -171,8 +171,17 @@ export default function About() {
               sm: "repeat(2, 1fr)",
               lg: "repeat(3, 1fr)",
             },
-            // gridTemplateRows: "repeat(3, 350px)",
+            gridTemplateRows: {
+              xs: "repeat(3, auto)",
+              sm: "repeat(2, auto)",
+              lg: "repeat(1, 1fr)",
+            },
             width: "100%",
+            height: {
+              xs: "auto",
+              sm: "auto",
+              lg: "900px",
+            },
           }}
         >
           {/* ---------1--------- */}
@@ -180,15 +189,10 @@ export default function About() {
             item
             xs={12}
             sx={{
+              overflow: "scroll",
               border: "1px solid #eeeeee",
               color: "#e0e0e0",
-              gridRow: { xs: "span 2", sm: "span 2", lg: "span 3" },
-              // gridRow: "span 2",
-              // height: {
-              //   xs: "auto",
-              //   sm: "auto",
-              //   lg: "700px",
-              // },
+              gridRow: { lg: "span 3" },
               overflow: { xs: "auto", sm: "auto", lg: "hidden" },
             }}
           >
@@ -283,20 +287,17 @@ export default function About() {
             xs={12}
             sx={{
               border: "1px solid #eeeeee",
-              // gridRow: "span 3",
-              gridRow: { xs: "span 1", sm: "span 3", lg: "span 3" },
+              gridRow: {
+                xs: "span 1",
+                sm: "span 2",
+                lg: "span 3",
+              },
 
               color: "#e0e0e0",
-              // height: {
-              //   xs: "auto",
-              //   sm: "auto",
-              //   lg: "700px",
-              // },
-              overflow: { xs: "auto", sm: "auto", lg: "hidden" },
+              overflow: "scroll",
             }}
           >
             <Box
-              align="right"
               sx={{
                 p: 4,
               }}
@@ -304,6 +305,7 @@ export default function About() {
               <Typography
                 variant="h5"
                 gutterBottom
+                align="right"
                 sx={{
                   fontSize: {
                     xs: "1.2rem",
@@ -319,6 +321,7 @@ export default function About() {
                 (React + Tailwind + Fake API)
               </Typography>
               <List
+                
                 sx={{
                   mt: 2,
                   color: "#e0e0e0",
@@ -326,14 +329,20 @@ export default function About() {
                   listStyleType: "disc",
                 }}
               >
-                <ListItem sx={{ display: "list-item" }}>
+                <ListItem sx={{ display: "list-item" ,textAlign: "right"}}>
                   نمایش لیست محصولات با امکان فیلتر و مرتب‌سازی
                 </ListItem>
               </List>
+              <Typography variant="h5" fontWeight="bold">
+               
+              </Typography>
               <Typography variant="h5" fontWeight="bold"></Typography>
-              <Typography variant="h5" fontWeight="bold"></Typography>
-              <Typography variant="h5" fontWeight="bold"></Typography>
-              <Typography variant="h5" fontWeight="bold"></Typography>
+              <Typography variant="h5" fontWeight="bold">
+             
+              </Typography>
+              <Typography variant="h5" fontWeight="bold">
+               
+              </Typography>
             </Box>
           </Grid>
           {/* --------3---------- */}
@@ -344,12 +353,8 @@ export default function About() {
             sx={{
               border: "1px solid #eeeeee",
               color: "#e0e0e0",
-              height: {
-                xs: "auto",
-                sm: "auto",
-                lg: "700px",
-              },
-              overflow: { xs: "auto", sm: "auto", lg: "hidden" },
+              gridRow: { lg: "span 3" },
+              overflow: "scroll",
             }}
           >
             <Box
@@ -372,7 +377,14 @@ export default function About() {
                   },
                 }}
               >
-                front end developer
+                front end developer Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Deleniti iusto soluta laboriosam distinctio ab
+                maiores do Lorem ipsum dolor sit amet consectetur adipisicing
+                elit. Deserunt velit aliquam dicta laborum eius. Mollitia rerum
+                possimus at quae facere placeat accusantium culpa assumenda
+                voluptatum dolores voluptas quisquam, cum officia delectus
+                fugiat ullam ea explicabo asperiores, rem pariatur nobis
+                repellat. lorem reiciendis sapiente voluptates quibusdam.
               </Typography>
             </Box>
           </Grid>
