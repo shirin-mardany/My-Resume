@@ -5,14 +5,12 @@ import App from './App.jsx'
 
 // React Router
 import { BrowserRouter } from 'react-router-dom'
-// import { HashRouter } from "react-router-dom";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    {/* <HashRouter> */}
-      <BrowserRouter>
+    <BrowserRouter basename="/My-Resume">
       <App />
-      </BrowserRouter>
+    </BrowserRouter>
   </StrictMode>
 );
 
