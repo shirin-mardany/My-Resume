@@ -1009,7 +1009,7 @@ export default function About() {
                 padding: "10px",
               }}
             >
-              <source src="/film/Login Form.mp4" type="video/mp4" />
+              src={`${import.meta.env.BASE_URL}film/ecommerce.mp4`}
             </video>
           </Box>
           {/* --- content --- */}
@@ -1127,7 +1127,7 @@ export default function About() {
                 padding: "10px",
               }}
             >
-              <source src="/film/keyboard.mp4" type="video/mp4" />
+              src={`${import.meta.env.BASE_URL}film/ecommerce.mp4`}
             </video>
           </Box>
           {/* --- content --- */}
@@ -1240,7 +1240,7 @@ export default function About() {
                 padding: "10px",
               }}
             >
-              <source src="/film/General Project.mp4" type="video/mp4" />
+              src={`${import.meta.env.BASE_URL}film/ecommerce.mp4`}
             </video>
           </Box>
           {/* --- content --- */}
@@ -1359,7 +1359,7 @@ export default function About() {
                 padding: "10px",
               }}
             >
-              <source src="/film/Simple Blog App.mp4" type="video/mp4" />
+              src={`${import.meta.env.BASE_URL}film/ecommerce.mp4`}
             </video>
           </Box>
           {/* --- content --- */}
