@@ -737,7 +737,10 @@ export default function About() {
                 padding: "10px",
               }}
             >
-              <source src="/film/ecommerce.mp4" type="video/mp4" />
+              <source
+                src={`${import.meta.env.BASE_URL}film/ecommerce.mp4`}
+                type="video/mp4"
+              />
             </video>
           </Box>
           {/* --- content --- */}
