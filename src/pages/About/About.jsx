@@ -1121,7 +1121,7 @@ export default function About() {
                 border: "1px solid #eeeeee",
                 borderRadius: "12px",
                 maxHeight: "100%",
-                height: "100%",
+                padding: "10px",
               }}
             >
               <source src="/film/keyboard.mp4" type="video/mp4" />
