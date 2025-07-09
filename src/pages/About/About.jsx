@@ -107,6 +107,7 @@ export default function About() {
     },
   };
 
+  //media
   const links = [
     {
       name: "shirin-mardany",
@@ -580,7 +581,8 @@ export default function About() {
               <Box sx={{ borderBottom: "2px solid #696868", p: 2 }}>
                 <Typography variant="h5"> Front End :</Typography>
                 <Typography variant="h6" pt={2} color="#b7b7a4">
-                  Neumorphism style
+                  (HTML + CSS + js + window.addEventListener + keyup + keydown +
+                  Neumorphism style )
                 </Typography>
               </Box>
               {/* --------------General Project---------------- */}
@@ -1369,8 +1371,9 @@ export default function About() {
               }}
             >
               <source
-              src={`${import.meta.env.BASE_URL}film/Blog.mp4`}
-                type="video/mp4" />
+                src={`${import.meta.env.BASE_URL}film/Blog.mp4`}
+                type="video/mp4"
+              />
             </video>
           </Box>
           {/* --- content --- */}
