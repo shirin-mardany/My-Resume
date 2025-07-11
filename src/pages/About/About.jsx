@@ -50,9 +50,10 @@ export default function About() {
     lineHeight: 1.5,
     direction: "rtl",
     fontSize: { xs: "1.1rem", sm: "1.3rem", md: "1rem", lg: "1rem" },
-    color: "#c3c3c3",
+    color: "#535e5f",
     "&:hover": {
-      color: "#b6bb90",
+      color: "#0d0e0e",
+      bgcolor: "#9a9a9717",
     },
   };
 
@@ -62,9 +63,10 @@ export default function About() {
     lineHeight: 1.8,
     direction: "rtl",
     fontSize: { xs: "1rem", sm: "1.2rem", md: "1rem", lg: "1rem" },
-    color: "#b8b7b7",
+    color: "#535e5f",
     "&:hover": {
-      color: "#f0f0f0",
+      color: "#0d0e0e",
+      bgcolor: "#9a9a9717",
     },
   };
 
@@ -93,17 +95,14 @@ export default function About() {
     fontSize: "6rem",
     color: "#9a9a97",
     marginRight: "1.5rem",
-    "&:hover": {
-      color: "#cececc",
-    },
+ 
   };
 
   //back icon
   const backIcon = {
-    color: "#cdcdcd",
-    fontSize: "2.5rem",
+    color: "#867d76",
     "&:hover": {
-      color: "#fca311",
+      color: "#b2730d",
     },
   };
 
@@ -148,7 +147,7 @@ export default function About() {
       maxWidth={false}
       sx={{
         py: 4,
-        bgcolor: "#212121",
+        bgcolor: "#E5E0D8",
         minWidth: "400px",
       }}
     >
@@ -168,12 +167,12 @@ export default function About() {
           md={4}
           sx={{
             p: 4,
-            color: "#e0e0e0",
+            color: "#1B3C53",
             width: { xs: "100%", sm: "100%", md: "49%" },
             minWidth: "350px",
             height: "450px",
             maxHeight: "500px",
-            border: "1px solid #eeeeee",
+            border: "1px solid #1B3C53",
           }}
         >
           <Box
@@ -210,7 +209,7 @@ export default function About() {
           xs={12}
           md={8}
           sx={{
-            border: "1px solid #eeeeee",
+            border: "1px solid #1B3C53",
             width: "49%",
             minWidth: "350px",
             height: "450px",
@@ -242,20 +241,30 @@ export default function About() {
           spacing={2}
           sx={{
             width: "100%",
-            border: "1px solid #eeeeee",
+            border: "1px solid #1B3C53",
           }}
         >
-          <Grid item sx={{ color: "#e0e0e0", width: "100%" }}>
+          <Grid item sx={{ width: "100%" }}>
             <Box
               sx={{
                 p: 4,
                 direction: "rtl",
               }}
             >
-              <Typography variant="h4" fontWeight="bold" align="right">
+              <Typography
+                variant="h4"
+                fontWeight="bold"
+                align="right"
+                sx={{ color: "#1B3C53" }}
+              >
                 هدف
               </Typography>
-              <Typography variant="h6" gutterBottom align="right">
+              <Typography
+                variant="h6"
+                gutterBottom
+                align="right"
+                sx={{ color: "#456882" }}
+              >
                 من یک توسعه‌دهنده‌ی فرانت‌اند در حال رشدم که با اشتیاق و پشتکار،
                 مسیر یادگیری را به‌صورت مداوم دنبال می‌کنم. طی دو سال گذشته،
                 پایه‌های HTML، CSS و JavaScript را آموخته‌ام و در ماه‌های اخیر،
@@ -303,10 +312,24 @@ export default function About() {
             item
             xs={12}
             sx={{
-              overflow: "scroll",
-              border: "1px solid #eeeeee",
-              color: "#e0e0e0",
+              overflow: "auto",
+              border: "1px solid #1B3C53",
+              color: "#1B3C53",
               gridRow: { lg: "span 3" },
+
+              scrollbarWidth: "thin",
+              scrollbarColor: "#7D9D9C #E4DCCF",
+              "&::-webkit-scrollbar": {
+                width: "8px",
+              },
+              "&::-webkit-scrollbar-track": {
+                backgroundColor: "#E5E0D8",
+              },
+              "&::-webkit-scrollbar-thumb": {
+                backgroundColor: "#7D9D9C",
+                borderRadius: "10px",
+                border: "2px solid #E5E0D8",
+              },
             }}
           >
             <Box
@@ -329,8 +352,7 @@ export default function About() {
               <TableContainer //قاب اصلی جدول هست، باعث می‌شه اسکرول‌پذیر بشه
                 sx={{
                   mt: 2,
-                  bgcolor: "#212121",
-                  // border: "1px solid #eeeeee",
+                  bgcolor: "#E5E0D8",
                   px: { sm: 5, md: 0 },
                 }}
               >
@@ -342,7 +364,7 @@ export default function About() {
                       <TableCell
                         align="left"
                         sx={{
-                          color: "#e0e0e0",
+                          color: "#b2730d",
                           fontWeight: "bold",
                           fontSize: {
                             xs: "1.5rem",
@@ -359,7 +381,7 @@ export default function About() {
                       <TableCell
                         align="right"
                         sx={{
-                          color: "#e0e0e0",
+                          color: "#b2730d",
                           fontWeight: "bold",
                           fontSize: {
                             xs: "1.5rem",
@@ -379,13 +401,16 @@ export default function About() {
                   <TableBody>
                     {skills.map((row, idx) => (
                       <TableRow key={idx}>
-                        <TableCell align="left" sx={{ color: "#aba8a8" }}>
+                        <TableCell
+                          align="left"
+                          sx={{ color: "#867d76", fontWeight: "900" }}
+                        >
                           {row.name}
                         </TableCell>
                         <TableCell
                           align="right"
                           sx={{
-                            color: "#aba8a8",
+                            color: "#867d76",
                             fontSize: {
                               xs: "1.2rem",
                               sm: "1.5rem",
@@ -408,7 +433,7 @@ export default function About() {
             item
             xs={12}
             sx={{
-              border: "1px solid #eeeeee",
+              border: "1px solid #1B3C53",
               gridRow: {
                 xs: "span 1",
                 sm: "span 1",
@@ -416,8 +441,22 @@ export default function About() {
                 lg: "span 3",
               },
 
-              color: "#e0e0e0",
-              overflow: "scroll",
+              color: "#1B3C53",
+              overflow: "auto",
+
+              scrollbarWidth: "thin",
+              scrollbarColor: "#7D9D9C #E4DCCF",
+              "&::-webkit-scrollbar": {
+                width: "8px",
+              },
+              "&::-webkit-scrollbar-track": {
+                backgroundColor: "#E5E0D8",
+              },
+              "&::-webkit-scrollbar-thumb": {
+                backgroundColor: "#7D9D9C",
+                borderRadius: "10px",
+                border: "2px solid #E5E0D8",
+              },
             }}
           >
             <Box
@@ -442,7 +481,7 @@ export default function About() {
                 gutterBottom
                 align="center"
                 sx={{
-                  color: "#fca311",
+                  color: "#b2730d",
                   fontSize: {
                     xs: "1.2rem",
                     sm: "2rem",
@@ -463,7 +502,7 @@ export default function About() {
               </Typography>
               <Box sx={{ borderBottom: "2px solid #696868", p: 2 }}>
                 <Typography variant="h5"> Front End :</Typography>
-                <Typography variant="h6" pt={2} color="#b7b7a4">
+                <Typography variant="h6" pt={2} color="#867d76">
                   (React + MUI + Redux + RESTful APIs + React Router + dynamic
                   routing + Swiper + utility functions + custom hooks +
                   responsive design + hot-toast + react-icons + .env )
@@ -472,7 +511,7 @@ export default function About() {
               {/* ------ */}
               <Box sx={{ borderBottom: "2px solid #696868", p: 2 }}>
                 <Typography variant="h5"> Back End : </Typography>
-                <Typography variant="h6" pt={2} color="#b7b7a4">
+                <Typography variant="h6" pt={2} color="#867d76">
                   (Node.js + Express + Mongoose + Schema + JWT + bcrypt + cors +
                   dotenv)
                 </Typography>
@@ -480,7 +519,7 @@ export default function About() {
               {/* ----- */}
               <Box sx={{ borderBottom: "2px solid #696868", pb: 2 }}>
                 <Typography variant="h5"> Data Base :</Typography>
-                <Typography variant="h6" pt={2} color="#b7b7a4">
+                <Typography variant="h6" pt={2} color="#867d76">
                   (MongoDB + Postman)
                 </Typography>
               </Box>
@@ -490,7 +529,7 @@ export default function About() {
                 gutterBottom
                 align="center"
                 sx={{
-                  color: "#fca311",
+                  color: "#b2730d",
                   fontSize: {
                     xs: "1.2rem",
                     sm: "2rem",
@@ -510,7 +549,7 @@ export default function About() {
                 </Link>
               </Typography>
               <Box sx={{ borderBottom: "2px solid #696868", p: 2 }}>
-                <Typography variant="h6" pt={2} color="#b7b7a4">
+                <Typography variant="h6" pt={2} color="#867d76">
                   ( Fetch API , فونت فارسی Vazir , Context API , React Icons ,
                   React Bootstrap , React Router DOM , React Router DOM , Vite )
                 </Typography>
@@ -521,7 +560,7 @@ export default function About() {
                 gutterBottom
                 align="center"
                 sx={{
-                  color: "#fca311",
+                  color: "#b2730d",
                   fontSize: {
                     xs: "1.2rem",
                     sm: "2rem",
@@ -542,14 +581,14 @@ export default function About() {
               </Typography>
               <Box sx={{ borderBottom: "2px solid #696868", p: 2 }}>
                 <Typography variant="h5"> Front End :</Typography>
-                <Typography variant="h6" pt={2} color="#b7b7a4">
+                <Typography variant="h6" pt={2} color="#867d76">
                   (HTML + CSS Variables & Animations + Vanilla JavaScript +
                   Fetch API + Responsive Design + Theme Switcher)
                 </Typography>
               </Box>
               <Box sx={{ borderBottom: "2px solid #696868", p: 2 }}>
                 <Typography variant="h5"> API :</Typography>
-                <Typography variant="h6" pt={2} color="#b7b7a4">
+                <Typography variant="h6" pt={2} color="#867d76">
                   (https://fakestoreapi.com/auth/login)
                 </Typography>
               </Box>
@@ -559,7 +598,7 @@ export default function About() {
                 gutterBottom
                 align="center"
                 sx={{
-                  color: "#fca311",
+                  color: "#b2730d",
                   fontSize: {
                     xs: "1.2rem",
                     sm: "2rem",
@@ -580,9 +619,8 @@ export default function About() {
               </Typography>
               <Box sx={{ borderBottom: "2px solid #696868", p: 2 }}>
                 <Typography variant="h5"> Front End :</Typography>
-                <Typography variant="h6" pt={2} color="#b7b7a4">
-                  (HTML + CSS + js + window.addEventListener + keyup + keydown +
-                  Neumorphism style )
+                <Typography variant="h6" pt={2} color="#867d76">
+                  Neumorphism style
                 </Typography>
               </Box>
               {/* --------------General Project---------------- */}
@@ -591,7 +629,7 @@ export default function About() {
                 gutterBottom
                 align="center"
                 sx={{
-                  color: "#fca311",
+                  color: "#b2730d",
                   fontSize: {
                     xs: "1.2rem",
                     sm: "2rem",
@@ -611,7 +649,7 @@ export default function About() {
                 </Link>
               </Typography>
               <Box sx={{ borderBottom: "2px solid #696868", p: 2 }}>
-                <Typography variant="h6" pt={2} color="#b7b7a4">
+                <Typography variant="h6" pt={2} color="#867d76">
                   HTML, CSS (متغیرهای CSS و انیمیشن)، JavaScript, Responsive
                   Menu, Slider, Dark/Light Mode
                 </Typography>
@@ -622,7 +660,7 @@ export default function About() {
                 gutterBottom
                 align="center"
                 sx={{
-                  color: "#fca311",
+                  color: "#b2730d",
                   fontSize: {
                     xs: "1.2rem",
                     sm: "2rem",
@@ -642,7 +680,7 @@ export default function About() {
                 </Link>
               </Typography>
               <Box sx={{ borderBottom: "2px solid #696868", p: 2 }}>
-                <Typography variant="h6" pt={2} color="#b7b7a4">
+                <Typography variant="h6" pt={2} color="#867d76">
                   (React، Vite، json-server، Bootstrap، React-Bootstrap)
                 </Typography>
               </Box>
@@ -653,10 +691,25 @@ export default function About() {
             item
             xs={12}
             sx={{
-              border: "1px solid #eeeeee",
-              color: "#e0e0e0",
+              border: "1px solid #1B3C53",
+              color: "#1B3C53",
+
               gridRow: { lg: "span 3" },
-              overflow: "scroll",
+              overflow: "auto",
+
+              scrollbarWidth: "thin",
+              scrollbarColor: "#7D9D9C #E4DCCF",
+              "&::-webkit-scrollbar": {
+                width: "8px",
+              },
+              "&::-webkit-scrollbar-track": {
+                backgroundColor: "#E5E0D8",
+              },
+              "&::-webkit-scrollbar-thumb": {
+                backgroundColor: "#7D9D9C",
+                borderRadius: "10px",
+                border: "2px solid #E5E0D8",
+              },
             }}
           >
             <Box
@@ -668,6 +721,7 @@ export default function About() {
                 variant="h5"
                 fontWeight="bold"
                 sx={{
+                  color: "#1B3C53",
                   fontSize: {
                     xs: "1.2rem",
                     sm: "2rem",
@@ -687,13 +741,14 @@ export default function About() {
                       target="_blank"
                       rel="noopener noreferrer"
                       sx={{
-                        // border: "1px solid red",
+                        border: "1px solid #b2730d",
                         display: "flex",
                         width: "90%",
                         margin: "10px auto",
                         "&:hover": {
                           bgcolor: "#9a9a9717",
-                          color: "#fca311",
+                          color: "#b2730d",
+                          borderRadius: "30px",
                         },
                       }}
                     >
@@ -712,7 +767,7 @@ export default function About() {
           id="ecommerce-detail"
           sx={{
             padding: 1,
-            border: "1px solid #eeeeee",
+            border: "1px solid #1B3C53",
 
             width: "100%",
           }}
@@ -733,7 +788,7 @@ export default function About() {
               loop
               muted
               style={{
-                border: "1px solid #eeeeee",
+                border: "1px solid #1B3C53",
                 borderRadius: "12px",
                 maxHeight: "100%",
                 padding: "10px",
@@ -756,7 +811,7 @@ export default function About() {
               variant="h5"
               fontWeight="bold"
               sx={{
-                borderBottom: "2px solid #696868",
+                borderBottom: "2px solid #1B3C53",
                 pb: 2,
                 color: "#618574",
               }}
@@ -837,14 +892,16 @@ export default function About() {
               component="a"
               href="#ecommerce"
               sx={{
+                p: 2,
                 display: "flex",
-                width: "90%",
+                width: "100%",
                 margin: "10px auto",
+                ...backIcon,
               }}
             >
               <KeyboardDoubleArrowUpIcon
                 sx={{
-                  ...backIcon,
+                  fontSize: "2.5rem",
                 }}
               />
             </ListItemButton>
@@ -855,7 +912,7 @@ export default function About() {
           id="Shopping-detail"
           sx={{
             padding: 1,
-            border: "1px solid #eeeeee",
+            border: "1px solid #1B3C53",
 
             width: "100%",
           }}
@@ -875,7 +932,7 @@ export default function About() {
               src={shopping}
               alt="shopping"
               style={{
-                border: "1px solid #eeeeee",
+                border: "1px solid #1B3C53",
                 borderRadius: "12px",
                 maxHeight: "100%",
                 padding: "10px",
@@ -963,16 +1020,18 @@ export default function About() {
             {/* back icon */}
             <ListItemButton
               component="a"
-              href="#Shopping"
+              href="#ecommerce"
               sx={{
+                p: 2,
                 display: "flex",
-                width: "90%",
+                width: "100%",
                 margin: "10px auto",
+                ...backIcon,
               }}
             >
               <KeyboardDoubleArrowUpIcon
                 sx={{
-                  ...backIcon,
+                  fontSize: "2.5rem",
                 }}
               />
             </ListItemButton>
@@ -983,7 +1042,7 @@ export default function About() {
           id="LoginForm-detail"
           sx={{
             padding: 1,
-            border: "1px solid #eeeeee",
+            border: "1px solid #1B3C53",
 
             width: "100%",
           }}
@@ -1005,7 +1064,7 @@ export default function About() {
               loop
               muted
               style={{
-                border: "1px solid #eeeeee",
+                border: "1px solid #1B3C53",
                 borderRadius: "12px",
                 maxHeight: "100%",
                 padding: "10px",
@@ -1084,16 +1143,18 @@ export default function About() {
             {/* back icon */}
             <ListItemButton
               component="a"
-              href="#LoginForm"
+              href="#ecommerce"
               sx={{
+                p: 2,
                 display: "flex",
-                width: "90%",
+                width: "100%",
                 margin: "10px auto",
+                ...backIcon,
               }}
             >
               <KeyboardDoubleArrowUpIcon
                 sx={{
-                  ...backIcon,
+                  fontSize: "2.5rem",
                 }}
               />
             </ListItemButton>
@@ -1104,7 +1165,7 @@ export default function About() {
           id="Keyboard-detail"
           sx={{
             padding: 1,
-            border: "1px solid #eeeeee",
+            border: "1px solid #1B3C53",
 
             width: "100%",
           }}
@@ -1126,7 +1187,7 @@ export default function About() {
               loop
               muted
               style={{
-                border: "1px solid #eeeeee",
+                border: "1px solid #1B3C53",
                 borderRadius: "12px",
                 maxHeight: "100%",
                 padding: "10px",
@@ -1200,16 +1261,18 @@ export default function About() {
             {/* back icon */}
             <ListItemButton
               component="a"
-              href="#Keyboard"
+              href="#ecommerce"
               sx={{
+                p: 2,
                 display: "flex",
-                width: "90%",
+                width: "100%",
                 margin: "10px auto",
+                ...backIcon,
               }}
             >
               <KeyboardDoubleArrowUpIcon
                 sx={{
-                  ...backIcon,
+                  fontSize: "2.5rem",
                 }}
               />
             </ListItemButton>
@@ -1220,7 +1283,7 @@ export default function About() {
           id="GeneralProject-detail"
           sx={{
             padding: 1,
-            border: "1px solid #eeeeee",
+            border: "1px solid #1B3C53",
 
             width: "100%",
           }}
@@ -1242,7 +1305,7 @@ export default function About() {
               loop
               muted
               style={{
-                border: "1px solid #eeeeee",
+                border: "1px solid #1B3C53",
                 borderRadius: "12px",
                 maxHeight: "100%",
                 padding: "10px",
@@ -1322,16 +1385,18 @@ export default function About() {
             {/* back icon */}
             <ListItemButton
               component="a"
-              href="#GeneralProject"
+              href="#ecommerce"
               sx={{
+                p: 2,
                 display: "flex",
-                width: "90%",
+                width: "100%",
                 margin: "10px auto",
+                ...backIcon,
               }}
             >
               <KeyboardDoubleArrowUpIcon
                 sx={{
-                  ...backIcon,
+                  fontSize: "2.5rem",
                 }}
               />
             </ListItemButton>
@@ -1342,7 +1407,7 @@ export default function About() {
           id="SimpleBlogApp-detail"
           sx={{
             padding: 1,
-            border: "1px solid #eeeeee",
+            border: "1px solid #1B3C53",
 
             width: "100%",
           }}
@@ -1364,7 +1429,7 @@ export default function About() {
               loop
               muted
               style={{
-                border: "1px solid #eeeeee",
+                border: "1px solid #1B3C53",
                 borderRadius: "12px",
                 maxHeight: "100%",
                 padding: "10px",
@@ -1440,18 +1505,21 @@ export default function About() {
                 استفاده از فونت فارسی Vazir برای تجربه کاربری بهتر
               </ListItem>
             </List>
+            {/* back icon */}
             <ListItemButton
               component="a"
-              href="#SimpleBlogApp"
+              href="#ecommerce"
               sx={{
+                p: 2,
                 display: "flex",
-                width: "90%",
+                width: "100%",
                 margin: "10px auto",
+                ...backIcon,
               }}
             >
               <KeyboardDoubleArrowUpIcon
                 sx={{
-                  ...backIcon,
+                  fontSize: "2.5rem",
                 }}
               />
             </ListItemButton>
